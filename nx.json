@@ -25,6 +25,9 @@
     "dashboard-e2e": {
       "tags": [],
       "implicitDependencies": ["dashboard"]
+    },
+    "bootstrap5ui": {
+      "tags": ["scope:public", "type:util", "target:all"]
     }
   }
 }

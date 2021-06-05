@@ -150,6 +150,47 @@
           }
         }
       }
+    },
+    "bootstrap5ui": {
+      "projectType": "library",
+      "root": "libs/bootstrap5ui",
+      "sourceRoot": "libs/bootstrap5ui/src",
+      "prefix": "nx-admin-pro",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/bootstrap5ui"],
+          "options": {
+            "project": "libs/bootstrap5ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/bootstrap5ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/bootstrap5ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bootstrap5ui"],
+          "options": {
+            "jestConfig": "libs/bootstrap5ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bootstrap5ui/src/**/*.ts",
+              "libs/bootstrap5ui/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   }
 }
